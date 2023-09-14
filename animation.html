@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: skyblue;
+        animation: changeBody 10s linear infinite;
+      }
+
+      .city {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: cityChange 10s linear infinite;
+        z-index: 99;
+      }
+      .citynight {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 98;
+      }
+      .circle {
+        position: absolute;
+        top: 38%;
+        left: 35%;
+        animation: circleMove 20s linear infinite;
+        z-index: 97;
+      }
+      .cloud {
+        position: relative;
+        position: absolute;
+        top: 25%;
+      }
+      .cloud img:first-child {
+        animation: cloudMove 5s linear infinite;
+      }
+      .cloud img:last-child {
+        position: absolute;
+        top: 100px;
+        animation: cloudMove 15s linear infinite;
+        opacity: 0;
+      }
+
+      .peoples {
+        position: absolute;
+        top: 65%;
+        left: 10%;
+        z-index: 100;
+      }
+      .peoples img:first-child {
+        animation: peopleMove 8s ease-in-out infinite;
+      }
+      .peoples img:last-child {
+        animation: peopleMove 12s ease-in-out infinite;
+      }
+      .sunBox {
+        width: fit-content;
+        height: 600px;
+        position: absolute;
+        top: 50px;
+        left: 540px;
+        transform: rotate(-100deg);
+        animation: sunMove 10s infinite linear;
+        transform-origin: center bottom;
+      }
+
+      h1 {
+        position: absolute;
+        top: 70%;
+        left: 22%;
+        animation: changeGreeting 10s infinite linear;
+        font-size: 90px;
+        color: white;
+      }
+
+      @keyframes cityChange {
+        0% {
+        }
+        65% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes circleMove {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes cloudMove {
+        0% {
+          opacity: 0;
+          transform: translate(0, 0);
+        }
+        25% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate(900px, 0);
+        }
+      }
+
+      @keyframes peopleMove {
+        0% {
+          opacity: 0;
+          transform: translate(0, 0);
+        }
+        25% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate(900px, 0);
+        }
+      }
+
+      /* 0,600 */
+      @keyframes sunMove {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: rotate(90deg);
+        }
+      }
+      @keyframes changeBody {
+        0% {
+        }
+        50% {
+          background-color: blanchedalmond;
+        }
+        100% {
+          background-color: darkblue;
+        }
+      }
+
+      @keyframes changeGreeting {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="city" src="./today/img/town_day.png" />
+    <img class="citynight" src="./today/img/town_night.png" />
+    <img class="circle" src="./today/img/circle.png" />
+    <div class="cloud">
+      <img src="./today/img/cloud1.png" />
+      <img src="./today/img/cloud2.png" />
+    </div>
+    <div class="peoples">
+      <img src="./today/img/man.png" />
+      <img src="./today/img/family.png" />
+    </div>
+    <div class="sunBox">
+      <img class="sun" src="./today/img/sun.png" />
+    </div>
+    <h1>Have a nice day!</h1>
+  </body>
+</html>
